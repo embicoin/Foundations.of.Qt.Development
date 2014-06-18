@@ -18,6 +18,13 @@ QSize BarDelegate::sizeHint( const QStyleOptionViewItem &option,
 void BarDelegate::paint( QPainter *painter,
         const QStyleOptionViewItem &option, const QModelIndex &index ) const
 {
+
+    // If the style option indicates that the item is selected, the background is filled
+    // with the platform’s selected background color that you also get from the style option
+    //
+    // The next two lines(painter->fillRect and index.model()->data) must always appear in some form or another in delegate painting
+    // methods.
+    //
     if( option.state & QStyle::State_Selected )
         painter->fillRect( option.rect, option.palette.highlight() );
 

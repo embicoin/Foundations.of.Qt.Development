@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
         QStandardItem *item = new QStandardItem( QString("Row %1").arg(r + 1) );
         item->setEditable( false );
         model.setItem( r, 0, item );
-        model.setItem( r, 1, new QStandardItem( QString::number( (r*30) % 100 )) );
+        model.setItem( r, 1, new QStandardItem( QString::number( ( r*30 ) % 100 )) );
     }
 
     table.setModel( &model );
