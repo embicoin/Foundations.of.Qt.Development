@@ -1,0 +1,7 @@
+*
+!*/
+!*.c
+!*.h
+!.cpp
+!*.pro
+!Makefile
