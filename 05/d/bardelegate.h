@@ -22,9 +22,11 @@ class BarDelegate : public QAbstractItemDelegate
                 const QStyleOptionViewItem &option,
                 const QModelIndex &index ) const;
 
+        // set the editor value based on the model
         void setEditorData( QWidget *editor,
                 const QModelIndex &index ) const;
 
+        // set the model value based on the editor
         void setModelData( QWidget *editor,
                 QAbstractItemModel *model,
                 const QModelIndex &index ) const;
