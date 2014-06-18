@@ -1,9 +1,18 @@
 #include "singleitemview.h"
 #include <QScrollBar>
+#include <QGridLayout>
 
 SingleItemView::SingleItemView( QWidget *parent )
 {
-    Q_UNUSED(parent);
+    QGridLayout *layout = new QGridLayout( this->viewport() );
+    label = new QLabel();
+
+    layout->addWidget( label, 0, 0);
+
+    label->setAlignment( Qt::AlignCenter );
+    label->setSizePolicy(
+            QSizePolicy( QSizePolicy::Expanding, QSizePolicy::Expanding ) );
+    label->setText( tr("<i>No data.</i>") );
 }
 
 QModelIndex SingleItemView::indexAt( const QPoint &point ) const

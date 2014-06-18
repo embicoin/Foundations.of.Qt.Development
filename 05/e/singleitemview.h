@@ -1,6 +1,7 @@
 #include <QAbstractItemView>
 #include <QWidget>
 #include <QLabel>
+#include <QTextEdit>
 
 class SingleItemView : public QAbstractItemView
 {
