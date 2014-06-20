@@ -15,6 +15,7 @@ int main( int argc, char **argv )
 
     SortOnSecondModel sorter;
     sorter.setSourceModel( &model );
+    sorter.setDynamicSortFilter( true );
 
     QTableView table;
     table.setModel( &sorter );
