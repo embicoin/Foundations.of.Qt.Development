@@ -9,5 +9,5 @@ class KeyboardFilter : public QWidget
 
     protected:
         bool eventFilter( QObject *dist, QEvent *event );
-        void keyPressEvent( QKeyEvent *event );
+        //void keyPressEvent( QKeyEvent *event );
 };

@@ -4,7 +4,6 @@
 KeyboardFilter::KeyboardFilter( QWidget *parent ) 
     : QWidget( parent )
 {
-    installEventFilter(this);
 }
 
 bool KeyboardFilter::eventFilter( QObject *dist, QEvent *event )
@@ -21,6 +20,7 @@ bool KeyboardFilter::eventFilter( QObject *dist, QEvent *event )
     return QWidget::eventFilter( dist, event );
 }
 
+/*
 void KeyboardFilter::keyPressEvent( QKeyEvent *event )
 {
     switch( event->key() )
@@ -34,3 +34,4 @@ void KeyboardFilter::keyPressEvent( QKeyEvent *event )
             break;
     }
 }
+*/

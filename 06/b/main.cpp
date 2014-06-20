@@ -1,12 +1,16 @@
 #include "keyboardfilter.h"
 #include <QApplication>
+#include <QLineEdit>
 
 int main( int argc, char **argv )
 {
     QApplication app( argc, argv );
 
-    KeyboardFilter k;
-    k.show();
+    QLineEdit lineEdit;
+    KeyboardFilter filter;
+
+    lineEdit.installEventFilter( &filter );
+    lineEdit.show();
 
     return app.exec();
 }
