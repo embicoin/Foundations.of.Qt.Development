@@ -63,3 +63,9 @@ void CircleBar::paintEvent( QPaintEvent *event )
             (int)((width()) * factor),
             (int)((width()) * factor));
 }
+
+void CircleBar::wheelEvent( QWheelEvent *event )
+{
+    //event->accept(); // whether it is necessary?
+    setValue( value() + event->delta()/20 );
+}

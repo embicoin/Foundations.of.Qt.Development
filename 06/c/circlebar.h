@@ -18,9 +18,8 @@ class CircleBar : public QWidget
 
     protected:
         void paintEvent( QPaintEvent* );
-//        void wheelEvent( QWheelEvent* );
+        void wheelEvent( QWheelEvent* );
 
     private:
         int m_value;
-
 };
