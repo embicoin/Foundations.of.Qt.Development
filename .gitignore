@@ -3,5 +3,7 @@
 !*.c
 !*.h
 !*.cpp
+moc*.h
+moc*.cpp
 !*.pro
 !Makefile
