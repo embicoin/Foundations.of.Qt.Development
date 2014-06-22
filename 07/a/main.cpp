@@ -42,6 +42,11 @@ int main( int argc, char **argv )
 
     // Draws the content of the document with painter p, clipped to rect.
     doc.drawContents( &painter, rect.translated( -rect.topLeft() ) );
+
+    rect.translate( 0, 160 );
+    rect.setHeight( doc.size().height() - 160 );
+    painter.setBrush( Qt::gray );
+    painter.drawRect( rect );
     painter.restore();
 
     QWidget window;
