@@ -6,7 +6,6 @@
 #include <QBrush>
 #include <QPixmap>
 #include <QLabel>
-#include <QDebug>
 
 int main( int argc, char **argv )
 {
@@ -33,11 +32,12 @@ int main( int argc, char **argv )
 
     QRect rect( 0, 0, 400, 200 );
     rect.translate( 0, 50 );
-    qDebug() << rect.height();
 
     rect.setHeight( 160 );
     doc.setTextWidth( rect.width() );
     painter.save();
+
+    // translate the painter to the top left point of the rectangle
     painter.translate( rect.topLeft() );
 
     // Draws the content of the document with painter p, clipped to rect.
