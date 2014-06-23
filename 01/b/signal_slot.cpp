@@ -6,6 +6,7 @@ MyClass::MyClass(const QString &text, QObject *parent)
     parent;
 }
 
+/*
 const QString& MyClass::text() const
 {
     return m_text;    
@@ -14,6 +15,7 @@ int MyClass::getLengthOfText() const
 {
     return m_text.length();
 }
+*/
 
 void MyClass::setText(const QString &text)
 {

@@ -7,8 +7,8 @@ class MyClass : public QObject
     public:
         MyClass(const QString &text, QObject *parent = 0);
 
-        const QString& text() const;
-        int getLengthOfText() const;
+//        const QString& text() const;
+//        int getLengthOfText() const;
 
     public slots:
         void setText(const QString &text);
