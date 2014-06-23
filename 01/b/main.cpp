@@ -1,5 +1,6 @@
 #include <QtGui>
 #include "signal_slot.h"
+#include <QLabel>
 
 int main(int argc, char *argv[])
 {
