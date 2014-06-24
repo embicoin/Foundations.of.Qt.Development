@@ -12,8 +12,7 @@ bool KeyboardFilter::eventFilter( QObject *dist, QEvent *event )
     {
         QKeyEvent *keyEvent = static_cast<QKeyEvent *>( event );
         static QString digits = QString( "1234567890" );
-        //if ( digits.indexOf( keyEvent->text() ) != -1 )
-        if ( keyEvent->key() == Qt::Key_0 )
+        if ( digits.indexOf( keyEvent->text() ) != -1 )
             return true;
     }
 
