@@ -1,3 +1,6 @@
+//
+// pro file: QT += xml
+//
 #include <QDomDocument>
 #include <QDebug>
 #include <QDomText>
