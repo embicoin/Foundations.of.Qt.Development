@@ -20,4 +20,6 @@ int main( void )
     qDebug() << "Success";
 
     file.close();
+
+    return 0;
 }
