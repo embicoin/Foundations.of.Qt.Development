@@ -27,7 +27,6 @@ int main( int argc, char **argv )
     foo.stop();
     bar.stop();
     device.stop();
-    //stopThreads = true;
 
     foo.wait();
     bar.wait();

@@ -23,7 +23,6 @@ void TextThread::run()
             return;
         }
         qDebug() << m_text;
-        //out << m_text << endl;
         sleep( 1 );
         mutex.unlock();
     }

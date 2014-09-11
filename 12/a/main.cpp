@@ -13,8 +13,7 @@ int main( int argc, char **argv )
     bar.start();
     foo.start();
 
-    //QMessageBox::information( 0, "Threading", "Close me to stop!");
-    while (1);
+    QMessageBox::information( 0, "Threading", "Close me to stop!");
 
     stopThreads = true;
 

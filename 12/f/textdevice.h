@@ -11,12 +11,12 @@ class TextDevice : public QThread
     public:
         TextDevice();
         
-        void run();
+        //void run();
         void stop();
 
     public slots:
         void write( const QString & text );
-        
+
     private:
         int m_count;
         QMutex m_mutex;

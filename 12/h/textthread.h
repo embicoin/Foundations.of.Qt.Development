@@ -3,7 +3,7 @@
 
 #include <QThread>
 #include <QString>
-#include "textdevice.h"
+//#include "textdevice.h"
 #include "textandnumber.h"
 
 class TextThread : public QThread

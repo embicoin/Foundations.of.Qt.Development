@@ -1,4 +1,4 @@
-#include "textdevice.h"
+//#include "textdevice.h"
 #include <QApplication>
 #include "textthread.h"
 #include <QMessageBox>

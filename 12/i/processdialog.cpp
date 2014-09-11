@@ -41,7 +41,9 @@ void ProcessDialog::runUic(void)
              this, SLOT(handleStateChange(QProcess::ProcessState)) );
 
     QStringList arguments;
+    // if the ui file name is wrong, the process will output error
     arguments << "-tr" << "MYTR" << "processdialog.ui";
+    // if the name for process is wrong, the process won't be started
     process->start( "uic", arguments );
 }
 

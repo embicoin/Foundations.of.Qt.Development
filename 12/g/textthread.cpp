@@ -3,14 +3,11 @@
 #include <QMutex>
 #include <QTextStream>
 
-//bool stopThreads = false;
 QMutex mutex;
-QTextStream out(stdout);
 
 TextThread::TextThread( const QString &text ) : QThread()
 {
     m_text = text;
-    //m_device = device;
     m_stop = false;
     m_count = 0;
 }

@@ -5,7 +5,7 @@
 
 //bool stopThreads = false;
 QMutex mutex;
-QTextStream out(stdout);
+//QTextStream out(stdout);
 
 TextThread::TextThread( const QString &text ) : QThread()
 {

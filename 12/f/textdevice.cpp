@@ -6,10 +6,10 @@ TextDevice::TextDevice()
     m_count = 0;
 }
 
-void TextDevice::run()
-{
-    exec();
-}
+//void TextDevice::run()
+//{
+//    exec();
+//}
 
 void TextDevice::stop()
 {
