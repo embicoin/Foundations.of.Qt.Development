@@ -3,5 +3,6 @@
 !*.c
 !*.h
 !*.cpp
+!*.pro
 moc*.h
 moc*.cpp
