@@ -149,6 +149,8 @@ void FtpDialog::getFileList()
         ftp.list();
 }
 
+// during the execution of ftp.list(), ftpListInfo will be
+// called for each file or folder
 void FtpDialog::ftpListInfo( const QUrlInfo &info )
 {
     ui.dirList->addItem( info.name() );
@@ -193,8 +195,12 @@ void FtpDialog::cdClicked()
     ui.disconnectButton->setEnabled( false );
     ui.cdButton->setEnabled( false );
     ui.upButton->setEnabled( false );
-    ui.getButton->setEnabled( false );
-
+    // Only when the selected item is a file, is the get button
+    // enabled
+    // ui.getButton->setEnabled( false );
+    //
+    // As only one item can be selected once,
+    // the selectedItems[0] is the one selected
     ftp.cd( ui.dirList->selectedItems()[0]->text() );
     ui.statusLabel->setText( tr("Changing directory...") );
 }
