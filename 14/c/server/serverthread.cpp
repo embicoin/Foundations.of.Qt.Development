@@ -26,11 +26,7 @@ QImage ServerThread::randomImage()
         return QImage();
     }
 
-    qDebug() << QString("There are %1 images").arg(entries.size());
-    qDebug() << QString("File name is %1").arg(entries[0].fileName());
-
-    //return QImage( entries.at( qrand() % entries.size() ).absolutePath() );
-    return QImage( entries.at( 0 ).absolutePath() );
+    return QImage( entries.at( qrand() % entries.size() ).absoluteFilePath() );
 }
 
 ServerThread::ServerThread( int descriptor, QObject *parent ) : QThread( parent )
@@ -50,8 +46,8 @@ void ServerThread::run()
 
     QBuffer buffer;
     QImageWriter writer( &buffer, "PNG" );
-    //writer.write( randomImage() );
-    writer.write( QImage("/home/debian/my_codes/foundations_of_qt_development/14/c/server/megaphone.png") );
+    writer.write( randomImage() );
+    //writer.write( QImage("/home/debian/my_codes/foundations_of_qt_development/14/c/server/megaphone.png") );
 
     QByteArray data;
     QDataStream stream( &data, QIODevice::WriteOnly );
